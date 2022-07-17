@@ -11,5 +11,15 @@ pipeline {
                 bat 'npm install prettier'
             }
         }
+        stage('Test'){
+            steps{
+                bat 'test.bat'
+            }
+        }
+        stage('Build'){
+            steps{
+                bat 'build.bat'
+            }
+        }
     }
 }
